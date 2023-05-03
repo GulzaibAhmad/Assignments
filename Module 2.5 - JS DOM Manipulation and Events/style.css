@@ -1,0 +1,17 @@
+h1 {
+    font-size: 4rem;
+}
+
+main {
+font-size: 3rem;
+}
+
+input {
+    height: 40px;
+    width: 200px;
+    font-size: 25px;
+}
+button {
+    padding: 5px;
+    font-size: 2rem;
+}

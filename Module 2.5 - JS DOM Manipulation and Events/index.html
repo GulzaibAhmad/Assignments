@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2.5 - JS DOM Manipulation and Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Module 2.5 - JS DOM Manipulation and Events
+        </h1>
+    </header>
+
+    <main>
+        <label for="num1">First number:</label>
+        <input type="number" id="num1">
+
+        <label for="num2">Second number:</label>
+        <input type="number" id="num2">
+
+        <button id="add">Add</button>
+        <button id="subtract">Subtract</button>
+        <button id="multiply">Multiply</button>
+        <button id="divide">Divide</button>
+        <button id="clear">Clear</button>
+
+        <p>The result is: <span id="result"></span></p>
+
+    </main>
+
+    <script>
+        const num1Input = document.querySelector('#num1');
+        const num2Input = document.querySelector('#num2');
+        const resultSpan = document.querySelector('#result');
+
+        const addButton = document.querySelector('#add');
+        const subtractButton = document.querySelector('#subtract');
+        const multiplyButton = document.querySelector('#multiply');
+        const divideButton = document.querySelector('#divide');
+        const clearButton = document.querySelector('#clear');
+
+        addButton.addEventListener('click', () => {
+            const result = Number(num1Input.value) + Number(num2Input.value);
+            resultSpan.textContent = result;
+        });
+
+        subtractButton.addEventListener('click', () => {
+            const result = Number(num1Input.value) - Number(num2Input.value);
+            resultSpan.textContent = result;
+        });
+
+        multiplyButton.addEventListener('click', () => {
+            const result = Number(num1Input.value) * Number(num2Input.value);
+            resultSpan.textContent = result;
+        });
+
+        divideButton.addEventListener('click', () => {
+            const result = Number(num1Input.value) / Number(num2Input.value);
+            resultSpan.textContent = result;
+        });
+
+        clearButton.addEventListener('click', () => {
+            num1Input.value = '';
+            num2Input.value = '';
+            resultSpan.textContent = '';
+        });
+
+    </script>
+</body>
+
+</html>
